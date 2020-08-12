@@ -14,6 +14,7 @@ import java.util.Base64;
 import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
 import org.bouncycastle.openssl.PEMParser;
 import org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter;
+import org.bouncycastle.util.encoders.Hex;
 
 public class Verifier {
   static {
@@ -30,6 +31,7 @@ public class Verifier {
     PublicKey publicKey = new JcaPEMKeyConverter().setProvider("BC").getPublicKey(keyInfo);
 
     byte[] decoded = Base64.getDecoder().decode(signature);
+    // byte[] decoded = Hex.decode(signature);
 
     Signature signer = Signature.getInstance("ECDSA", "BC");
     signer.initVerify(publicKey);
