@@ -1,2 +1,2 @@
-# safelight
+# lighthouse
 Site Authenticity Signer
