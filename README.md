@@ -1,2 +1,2 @@
-# lighthouse
-Site Authenticity Signer
+# Skylight
+Site Authenticity Macro
