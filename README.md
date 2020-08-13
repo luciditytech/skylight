@@ -1,2 +1,2 @@
 # Skylight
-Site Authenticity Macro
+Property Authenticity Macro
