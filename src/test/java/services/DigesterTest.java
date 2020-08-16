@@ -22,11 +22,12 @@ public class DigesterTest {
   public void testCall() {
     Map<String, Optional<String>> map = Stream.of(new String[][] {
       { "nonce", "046b6c7f-0b8a-43b9-b35d-6489e6daee91" }, 
-      { "timestamp", "2020-06-22T21:51:10Z" }, 
+      { "timestamp", "2020-06-22T21:51:10Z" },
+      { "cert", "ads-cert-v1.pem" }
     }).collect(Collectors.toMap(data -> data[0], data -> Optional.of(data[1])));
 
     String digest = Digester.call(map);
     logger.info("digest = " + digest);
-    Assertions.assertEquals("Vgl+PyGzh5v6SAYmbNERMbhe3WEeIdiz/eaZeOhSXyw=", digest);
+    Assertions.assertEquals("LoL5T2VXCVUnWCjZ+Ia2DTNXl07FFEPV7UNUhIatFUY=", digest);
   }
 }

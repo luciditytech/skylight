@@ -18,7 +18,8 @@ import org.bouncycastle.util.encoders.Hex;
 public class Digester {
   private static List<String> FIELDS = Arrays.asList(
     "nonce",
-    "timestamp"
+    "timestamp",
+    "cert"
   );
 
   static {
